@@ -33,7 +33,7 @@ plot(raw);
 title('enter when done zooming, select a start time and end time, then enter again')
 pause;
 times=ginput;
-times=floor(times);
+times=round(times);
 len=times(2,1)-times(1,1);
 close all
 
@@ -42,7 +42,7 @@ ind=zeros(1,reps);
 ind(1)=times(1,1);
 
 for j=2:reps
-    ind(j)=ind(j-1)+num;%+1;
+    ind(j)=ind(j-1)+num+1;
 end
 
 for k=1:reps

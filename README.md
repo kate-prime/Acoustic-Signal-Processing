@@ -12,6 +12,8 @@
  cleaner recording. Required inputs are mic channels to load (should be a vector of 1+ values),
  number of times each stimulus is repeated, and time in ms of time between pulses. Calls variables
  sig (signal from mic array) and fs (sampling rate) change those as needed.
+ *known bug 1/29/2020 a rounding error sometimes causes misalignment. try adding or removing "+1" 
+ in line 45*
  
  createIR creates an impulse response for the room/object of interest. Uses a very simple 
  Dual Channel FFT method. Use averaged data and a sine sweep for cleanest results. 

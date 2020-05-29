@@ -1,5 +1,5 @@
 
-function signal=getavecho(mics,reps,num)
+function signal=getavecho(mics,reps,num,fs,sig)
 %a function to create an average ensonification from multiple repitions
 %mics=mic channels to load
 %reps=number of repitions
@@ -63,4 +63,4 @@ close all
 signal=mean(stacked,1);
 spectrogram(signal,2^8,(2^8)-1,2^8,fs,'MinThreshold',-65,'power','yaxis');
 colormap('jet')
-save([fname(1:end-4),'_avg'],'signal','fs');
+%save([fname(1:end-4),'_avg'],'signal','fs');
